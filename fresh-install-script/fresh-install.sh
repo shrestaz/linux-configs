@@ -39,7 +39,6 @@ fc-cache -f
 mkdir ~/.config
 mkdir ~/.config/fontconfig
 wget -P ~/.config/fontconfig/ https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/fonts.conf
-#libinput gesture
 
 echo " ********** Installing applications ********** "
 installaur --noconfirm guake libinput-gestures slack-desktop windscribe-cli google-chrome visual-studio-code-bin android-sdk-platform-tools autokey em-keyboard insomnia mailspring megasync mongodb-compass otf-san-francisco pulseaudio-modules-bt-git spotify viber ark bash-completion docker docker-compose docker-machine kdeplasma-addons libreoffice-fresh lsof lsd os-prober p7zip partitionmanager redshift sddm syntax-highlighting unrar unzip virtualbox-host-dkms virtualbox kdialog gtk3-print-backends libunity ttf-liberation sni-qt capitaine-cursors sddm-kcm
@@ -51,6 +50,7 @@ sudo usermod -aG docker $USER
 
 echo " ********** Libinput gesture post-install ********** "
 sudo gpasswd -a $USER input
+wget -P ~/.config/ https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/libinput-gestures.conf
 libinput-gestures-setup autostart
 
 echo " ********** Set SDDM as default lock screen ********** "
