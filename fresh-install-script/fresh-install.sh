@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S --noconfirm figlet
+sudo pacman -S --noconfirm figlet go
 clear
 figlet "Setting up your Arch setup"
 
