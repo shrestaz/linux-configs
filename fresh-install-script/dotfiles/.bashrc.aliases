@@ -1,0 +1,45 @@
+#
+# ~/.bashrc.aliases
+#
+
+alias ls='ls --color=auto'
+
+alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
+alias journalctl='sudo journalctl'
+alias pacu='sudo pacman -Syu --noconfirm'
+alias systemctl='sudo systemctl'
+alias se='lsd /usr/bin | grep'
+alias ls='lsd --color=auto'
+alias install="sudo pacman -S"
+alias installsearch="sudo pacman -s"
+alias installaur="yay -S"
+alias installaursearch="yay -s"
+alias update="yay -Syyuu"
+alias remove="sudo pacman -R"
+alias ls='lsd'
+alias dir='dir -F --color=always'
+alias ll='lsd -l'
+alias cp='cp -iv'
+alias rm='rm -i'
+alias mv='mv -iv'
+alias grep='grep --color=auto -in'
+alias ..='cd ..'
+alias kder="kquitapp5 plasmashell && plasmashell &"
+alias sshpi="ssh pi@192.168.0.104"
+alias unlockdb="sudo rm /var/lib/pacman/db.lck"
+alias vpnc="windscribe connect"
+alias vpnd="windscribe disconnect"
+alias vpnlist="windscribe locations"
+alias vpn="windscribe"
+alias em="em -s"
+alias 1337kill="kill $(lsof -t -i:1337)"
+alias condaruc="conda activate RUC-F19_AI-DL"
+alias condad="conda deactivate"
+export QT_STYLE_OVERRIDE=gtk
+export QT_SELECT=qt5
+
+if [[ $LANG = '' ]]; then
+	export LANG=en_US.UTF-8
+	export LANG=en_DK.UTF-8
+fi
+
