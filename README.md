@@ -9,5 +9,5 @@
 
 3. Arch Linux post-install script. (This is very opinionated and meant only for the owner.
 ```
-wget https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/fresh-install.sh | bash
+wget -O - https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/fresh-install.sh | bash
 ```
