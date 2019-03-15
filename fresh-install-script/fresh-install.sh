@@ -20,7 +20,7 @@ echo " ********** Installing yay; An AUR helper ********** "
 sudo pacman -S --noconfirm git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si &&
 
 echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
@@ -70,6 +70,9 @@ source ~/.bashrc
 command -v nvm
 nvm install node
 
+echo " ********** Install Eduroam for RUC network ********** "
+xdg-open https://intra.ruc.dk/nc/en/employees/services-to-employees/ruc-digital/guides/internet-access/eduroam/setting-up-a-wireless-eduroam-profile-on-windows-apple-android-43-chromeos-and-linux/
+
 echo " ********** Finishing up notes ********** "
 echo "Sddm theme: Sugar dark"
 echo "Settings > Workspace Theme > Look and Feel > Aritim-Dark"
@@ -79,3 +82,4 @@ echo "Settings > Workspace Theme > Splash Screen > Simple Tux Splash"
 echo "Settings > Window Management > Task Switcher > Large Icons"
 echo "Settings > Shortcuts > Global Shortcuts > KWin > Toggle Present Windows (Ctrl + F10, Ctrl + Alt + Tab)"
 echo "Edit Chrome Application Properties > Application > Command = /usr/bin/google-chrome-stable  --remote-debugging-port=9222 %U"
+echo "Install the downloaded eduroam python installer as `python ~/Downloads/eduroam...`"
