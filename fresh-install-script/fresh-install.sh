@@ -27,6 +27,11 @@ echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
 rm -rf yay
 
+echo " ********** Git aware prompt ********** "
+mkdir ~/.bash
+cd ~/.bash
+git clone git://github.com/jimeh/git-aware-prompt.git
+
 echo " ********** Setting up bash profile and aliases ********** "
 wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/dotfiles/.bashrc
 mv ~/Downloads/.bashrc ~/.bashrc
