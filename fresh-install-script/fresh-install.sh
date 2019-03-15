@@ -21,10 +21,7 @@ sudo chmod a+x /etc/grub.d/31_hold_shift
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo " ********** Installing yay; An AUR helper ********** "
-sudo pacman -S --noconfirm git
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+wget -O - https://github.com/shrestaz/linux-configs/blob/master/fresh-install-script/helper/yay-installer.sh | bash
 
 echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
