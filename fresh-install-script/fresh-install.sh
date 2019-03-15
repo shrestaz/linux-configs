@@ -33,6 +33,9 @@ wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/mas
 mv ~/Downloads/.bashrc.aliases ~/.bashrc.aliases
 source ~/.bashrc
 
+echo " ********** Update existing packages before setting up anything else ********** "
+yay -Syyuu --noconfirm
+
 echo " ********** Installing fonts and modify system font rendering ********** "
 installaur --noconfirm ttf-google-fonts-git noto-fonts-emoji nerd-fonts-complete 
 fc-cache -f
