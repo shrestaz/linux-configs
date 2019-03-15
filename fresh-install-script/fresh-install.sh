@@ -6,7 +6,7 @@ figlet "Setting up your Arch setup"
 
 echo " ********** Remove applications from Antergos repo ********** "
 echo " ********** This is only if Antergos is installed isntead of Arch ********** "
-sudo pacman -Rcns --noconfirm antergos-alerts antergos-alpm-hooks antergos-desktop-settings antergos-keyring antergos-midnight-timers antergos-mirrorlist grub2-theme-antergos kfaenza-icon-theme numix-icon-theme numix-icon-theme-square pamacsudo pacman -Rcns --noconfirm antergos-alerts antergos-alpm-hooks antergos-desktop-settings antergos-keyring antergos-midnight-timers antergos-mirrorlist grub2-theme-antergos kfaenza-icon-theme numix-icon-theme numix-icon-theme-square pamac pamac-tray-appindicator
+sudo pacman -Rcns --noconfirm antergos-alerts antergos-alpm-hooks antergos-desktop-settings antergos-keyring antergos-midnight-timers antergos-mirrorlist grub2-theme-antergos kfaenza-icon-theme numix-icon-theme numix-icon-theme-square pamac pamac-tray-appindicator
 
 echo " ********** Overwriting pacman config ********** "
 wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/pacman.conf
