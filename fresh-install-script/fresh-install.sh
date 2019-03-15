@@ -6,7 +6,7 @@ figlet "Setting up your Arch setup"
 
 echo " ********** Remove applications from Antergos repo ********** "
 echo " ********** This is only if Antergos is installed isntead of Arch ********** "
-sudo pacman -Rcns --noconfirm antergos-alerts antergos-alpm-hooks antergos-desktop-settings antergos-keyring antergos-midnight-timers antergos-mirrorlist grub2-theme-antergos kfaenza-icon-theme numix-icon-theme numix-icon-theme-square pamac pamac-tray-appindicator
+sudo pacman -Rcns --noconfirm pulseaudio-bluetooth antergos-alerts antergos-alpm-hooks antergos-desktop-settings antergos-keyring antergos-midnight-timers antergos-mirrorlist grub2-theme-antergos kfaenza-icon-theme numix-icon-theme numix-icon-theme-square pamac pamac-tray-appindicator
 
 echo " ********** Overwriting pacman config ********** "
 wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/pacman.conf
@@ -46,7 +46,7 @@ wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/mas
 mv ~/Downloads/fonts.conf ~/.config/fontconfig/fonts.conf
 
 echo " ********** Installing applications ********** "
-yay -S --noconfirm guake libinput-gestures linux-headers slack-desktop windscribe-cli google-chrome visual-studio-code-bin android-sdk-platform-tools autokey em-keyboard insomnia mailspring megasync mongodb-compass otf-san-francisco pulseaudio-modules-bt-git spotify viber ark bash-completion docker docker-compose docker-machine kdeplasma-addons libreoffice-fresh lsof lsd os-prober p7zip partitionmanager redshift sddm syntax-highlighting unrar unzip virtualbox-host-dkms virtualbox kdialog gtk3-print-backends libunity ttf-liberation sni-qt capitaine-cursors sddm-kcm
+yay -S --noconfirm --noprovides guake libinput-gestures linux-headers slack-desktop windscribe-cli google-chrome visual-studio-code-bin android-sdk-platform-tools autokey em-keyboard insomnia mailspring megasync mongodb-compass otf-san-francisco pulseaudio-modules-bt-git spotify viber ark bash-completion docker docker-compose docker-machine kdeplasma-addons libreoffice-fresh lsof lsd os-prober p7zip partitionmanager redshift sddm syntax-highlighting unrar unzip virtualbox-host-modules-arch virtualbox-guest-iso virtualbox kdialog gtk3-print-backends libunity ttf-liberation sni-qt capitaine-cursors sddm-kcm
 
 echo " ********** Docker post install ********** "
 # Read more here: https://docs.docker.com/install/linux/linux-postinstall/
