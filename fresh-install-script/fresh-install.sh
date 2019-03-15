@@ -20,7 +20,7 @@ echo " ********** Installing yay; An AUR helper ********** "
 sudo pacman -S --noconfirm git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si &&
 
 echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
