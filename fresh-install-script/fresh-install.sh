@@ -21,7 +21,7 @@ sudo chmod a+x /etc/grub.d/31_hold_shift
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo " ********** Installing yay; An AUR helper ********** "
-wget -O - https://github.com/shrestaz/linux-configs/blob/master/fresh-install-script/helper/yay-installer.sh | bash
+wget -O - https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/helper/yay-installer.sh | bash
 
 echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
