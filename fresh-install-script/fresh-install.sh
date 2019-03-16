@@ -27,6 +27,11 @@ echo " ********** Finished setting up yay. Cleaing up. ********** "
 cd ..
 rm -rf yay
 
+echo " ********** Git aware prompt ********** "
+mkdir ~/.bash
+cd ~/.bash
+git clone git://github.com/jimeh/git-aware-prompt.git
+
 echo " ********** Setting up bash profile and aliases ********** "
 wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/dotfiles/.bashrc
 mv ~/Downloads/.bashrc ~/.bashrc
@@ -37,13 +42,15 @@ source ~/.bashrc
 echo " ********** Update existing packages before setting up anything else ********** "
 yay -Syyuu --noconfirm
 
-echo " ********** Installing fonts and modify system font rendering ********** "
+echo " ********** Installing fonts ********** "
 yay -S --noconfirm ttf-google-fonts-git noto-fonts-emoji nerd-fonts-complete 
-fc-cache -f
-mkdir ~/.config
-mkdir ~/.config/fontconfig
-wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/fonts.conf
-mv ~/Downloads/fonts.conf ~/.config/fontconfig/fonts.conf
+fc-cache -vf
+
+echo " ********** Uncomment the following if you want to modify how fonts are rendered ********** "
+# mkdir ~/.config
+# mkdir ~/.config/fontconfig
+# wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/fonts.conf
+# mv ~/Downloads/fonts.conf ~/.config/fontconfig/fonts.conf
 
 echo " ********** Installing applications ********** "
 yay -S --noconfirm --noprovides guake libinput-gestures linux-headers slack-desktop windscribe-cli google-chrome visual-studio-code-bin android-sdk-platform-tools autokey em-keyboard insomnia mailspring megasync mongodb-compass otf-san-francisco pulseaudio-modules-bt-git spotify viber ark bash-completion docker docker-compose docker-machine kdeplasma-addons libreoffice-fresh lsof lsd os-prober p7zip partitionmanager redshift sddm syntax-highlighting unrar unzip virtualbox-host-modules-arch virtualbox-guest-iso virtualbox kdialog gtk3-print-backends libunity ttf-liberation sni-qt capitaine-cursors sddm-kcm
@@ -87,4 +94,5 @@ echo "Settings > Workspace Theme > Splash Screen > Simple Tux Splash"
 echo "Settings > Window Management > Task Switcher > Large Icons"
 echo "Settings > Shortcuts > Global Shortcuts > KWin > Toggle Present Windows (Ctrl + F10, Ctrl + Alt + Tab)"
 echo "Edit Chrome Application Properties > Application > Command = /usr/bin/google-chrome-stable --remote-debugging-port=9222 %U"
-echo "Install the downloaded eduroam python installer as `python ~/Downloads/eduroam...`"
+echo "Install the downloaded eduroam python installer as `python ~/Downloads/eduroamecho " ********** Installing Windows fonts ********** "
+echo "Following this link https://smekkley.wordpress.com/2015/11/07/windows-10-font-on-arch/ for Windows fonts"
