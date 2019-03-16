@@ -13,7 +13,7 @@ wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/mas
 sudo mv ~/Downloads/pacman.conf /etc/pacman.conf
 
 echo " ********** Skip GRUB unless Shift key is held down ********** "
-wget -P ~/Downloads https://github.com/shrestaz/linux-configs/blob/master/fresh-install-script/configfiles/grub
+wget -P ~/Downloads https://raw.githubusercontent.com/shrestaz/linux-configs/master/fresh-install-script/configfiles/grub
 sudo mv ~/Downloads/grub /etc/default/grub
 wget -P ~/Downloads/ https://gist.githubusercontent.com/anonymous/8eb2019db2e278ba99be/raw/257f15100fd46aeeb8e33a7629b209d0a14b9975/gistfile1.sh
 sudo mv ~/Downloads/gistfile1.sh /etc/grub.d/31_hold_shift
