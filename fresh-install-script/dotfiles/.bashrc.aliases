@@ -8,17 +8,16 @@ alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
 alias journalctl='sudo journalctl'
 alias pacu='sudo pacman -Syu --noconfirm'
 alias systemctl='sudo systemctl'
-alias se='lsd /usr/bin | grep'
-alias ls='lsd --color=auto'
+alias se='ls /usr/bin | grep'
+alias ls='ls --color=auto'
 alias install="sudo pacman -S"
 alias installsearch="sudo pacman -s"
 alias installaur="yay -S"
 alias installaursearch="yay -s"
 alias update="yay -Syyuu"
 alias remove="sudo pacman -R"
-alias ls='lsd'
 alias dir='dir -F --color=always'
-alias ll='lsd -l'
+alias ll='ls -l'
 alias cp='cp -iv'
 alias rm='rm -i'
 alias mv='mv -iv'

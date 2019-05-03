@@ -8,16 +8,17 @@ export NODE_ENV=development
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-PS1="\n \[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \n\[\033[1;35m\] ツ\[\033[0m\] "
+PS1="\n \[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \n\[\033[1;35m\] ♬ ♪\[\033[0m\] "
 
 
 if [ -e ~/.bashrc.aliases ] ; then
    source ~/.bashrc.aliases
 fi
 
-BROWSER=/usr/bin/google-chrome-stable
-EDITOR=/usr/bin/nano
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -78,4 +79,19 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
-
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/thatonedroid/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/thatonedroid/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/thatonedroid/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/thatonedroid/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
